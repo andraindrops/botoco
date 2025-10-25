@@ -1,6 +1,3 @@
-// import { generateHTML } from "@tiptap/html/server";
-// import StarterKit from "@tiptap/starter-kit";
-
 import db from "@/_lib/db";
 
 import type * as noteSchema from "@/_schemas/domain/note";
