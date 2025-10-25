@@ -1,0 +1,67 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.2.0/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [
+              ":NODE:",
+              [":PACKAGE:", "!lucide-react", "!lucide-react/**"],
+              ":BLANK_LINE:",
+              "@/_lib/**",
+              ":BLANK_LINE:",
+              "@/_schemas/**",
+              ":BLANK_LINE:",
+              "@/_services/**",
+              ":BLANK_LINE:",
+              "@/_actions/**",
+              ":BLANK_LINE:",
+              "@/_components/ui/**",
+              ":BLANK_LINE:",
+              ["lucide-react", "lucide-react/**"],
+              ":BLANK_LINE:",
+              "@/_components/domain/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "files": {
+    "ignoreUnknown": true,
+    "includes": [
+      "**",
+      "!node_modules",
+      "!.next",
+      "!dist",
+      "!build",
+      "!src/_components/ui",
+      "!src/generated/prisma"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "nursery": {
+        "useSortedClasses": "error"
+      }
+    },
+    "domains": {
+      "next": "recommended",
+      "react": "recommended"
+    }
+  }
+}
