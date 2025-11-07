@@ -138,10 +138,10 @@ export default function Component({
             />
           </div>
           <section className="space-y-4">
-            <div className="grid grid-flow-col justify-end">
+            <div>
               <Button
                 type="button"
-                variant="outline"
+                variant="ghost"
                 onClick={() =>
                   codeSteps.append({
                     name: "",
@@ -153,11 +153,12 @@ export default function Component({
                 }
               >
                 <PlusIcon />
+                <div>Add a step</div>
               </Button>
             </div>
             <div className="space-y-4">
               {codeSteps.fields.map((step, stepIndex) => (
-                <div key={step.id} className="px-4">
+                <div key={step.id} className="rounded-sm p-4 shadow-sm">
                   <div className="grid grid-flow-col grid-cols-12 gap-4">
                     <div className="col-span-2 space-y-4">
                       <FormField

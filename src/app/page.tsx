@@ -15,7 +15,7 @@ export default async function Page() {
         <p className="font-bold text-xl">
           <a href="/">Botoco</a>
         </p>
-        <nav className="grid grid-flow-col items-center gap-4">
+        {/* <nav className="grid grid-flow-col items-center gap-4">
           <SignedOut>
             <SignInButton />
             <SignUpButton />
@@ -23,7 +23,7 @@ export default async function Page() {
           <SignedIn>
             <UserButton />
           </SignedIn>
-        </nav>
+        </nav> */}
       </header>
       <PageComponent />
       <footer className="text-center text-xs">

@@ -20,7 +20,7 @@ import {
 import {
   PlusIcon as AddIcon,
   EditIcon,
-  MenuIcon,
+  EllipsisIcon,
   PlayIcon,
   TrashIcon as RemoveIcon,
 } from "lucide-react";
@@ -42,18 +42,19 @@ export default function Component({
   return (
     <div className={cn("space-y-4", className)} {...props}>
       <div className="grid grid-flow-col justify-end">
-        <Button onClick={handleCreate}>
+        <Button
+          variant="ghost"
+          size="sm"
+          className="bg-[#f4f4f4]"
+          onClick={handleCreate}
+        >
           <AddIcon />
-          <div>Create</div>
         </Button>
       </div>
-      <div className="space-y-2">
+      <div className="space-y-4">
         {notes.map((note) => {
           return (
-            <div
-              key={note.id}
-              className="grid grid-cols-12 items-center gap-2 rounded-sm p-2"
-            >
+            <div key={note.id} className="grid grid-cols-12 items-center gap-2">
               <div className="col-span-8 text-sm">
                 <Link href={`/notes/${note.id}`}>
                   <div className="truncate">{note.name}</div>
@@ -62,9 +63,9 @@ export default function Component({
               <div className="col-span-4 grid grid-flow-col justify-end">
                 <DropdownMenu>
                   <DropdownMenuTrigger>
-                    <MenuIcon className="size-4" />
+                    <EllipsisIcon className="size-4" />
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="font-mono">
+                  <DropdownMenuContent className="space-y-1 font-mono">
                     <DropdownMenuItem
                       onClick={() => {
                         router.push(`/notes/${note.id}`);
@@ -77,7 +78,7 @@ export default function Component({
                     </DropdownMenuItem>
                     <DropdownMenuItem
                       onClick={() => {
-                        router.push(`/notes/${note.id}/plays`);
+                        router.push(`/notes/${note.id}`);
                       }}
                     >
                       <div className="grid grid-flow-col items-center gap-2">

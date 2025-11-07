@@ -25,13 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en">
-        <body>
-          <div className="grid h-screen font-mono">
-            <main className="mx-auto h-full min-h-0 w-full max-w-2xl p-8">
-              {children}
-            </main>
-          </div>
+      <html lang="en" className="h-full min-h-0">
+        <body className="h-full min-h-0">
+          <main className="h-full min-h-0 w-full font-mono">{children}</main>
         </body>
       </html>
     </ClerkProvider>

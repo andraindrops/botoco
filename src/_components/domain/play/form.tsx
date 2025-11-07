@@ -213,7 +213,7 @@ export default function Component({
                                 onValueChange={field.onChange}
                                 disabled={true}
                               >
-                                <SelectTrigger className="w-[80px] bg-white font-mono text-xs">
+                                <SelectTrigger className="w-full bg-white font-mono text-xs">
                                   <SelectValue placeholder="Select" />
                                 </SelectTrigger>
                                 <SelectContent
@@ -269,7 +269,7 @@ export default function Component({
                                   )
                                 }
                               >
-                                <SelectTrigger className="w-[80px] bg-white font-mono text-xs">
+                                <SelectTrigger className="w-full bg-white font-mono text-xs">
                                   <SelectValue placeholder="Select" />
                                 </SelectTrigger>
                                 <SelectContent
